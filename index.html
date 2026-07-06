@@ -282,82 +282,121 @@
             <path d="M37 112 Q20 60 45 15 Q55 60 37 112Z" fill="#1c4a2e" />
           </svg>
         </div>
-        
+
         <p class="tagline">Sign up today to get exciting offers..!</p>
       </div>
 
-      <div class="right-panel">
-        <h1 class="heading">Get Started</h1>
+      <div class="form-panel">
+        <div class="right-panel">
+          <h1 class="heading">Get Started</h1>
 
-        <form id="signup-form">
-          <div class="field">
-            <label for="firstName" class="signup-label">First Name</label>
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              placeholder="e.g. Sarah"
-            />
-          </div>
+          <form id="signup-form">
+            <div class="form-grid">
+              <div class="field">
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder=" "
+                  required
+                />
 
-          <div class="field">
-            <label for="lastName" class="signup-label">Last Name</label>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              placeholder="e.g. Connor"
-            />
-          </div>
+                <label for="firstName" class="signup-label">First Name</label>
 
-          <div class="field">
-            <label for="email" class="signup-label">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="you@example.com"
-            />
-          </div>
+                <p class="field__error">*Please enter a valid first name</p>
+              </div>
 
-          <div class="field">
-            <label for="phone" class="signup-label">Phone</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="08xxxxxxxxxx"
-            />
-          </div>
+              <div class="field">
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder=" "
+                  required
+                />
 
-          <div class="field">
-            <label for="password" class="signup-label">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="••••••••"
-            />
-          </div>
+                <label for="lastName" class="signup-label">Last Name</label>
 
-          <div class="field">
-            <label for="confirmPassword" class="signup-label"
-              >Confirm Password</label
-            >
-            <input
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              placeholder="••••••••"
-            />
-          </div>
+                <p class="field__error">*Please enter a valid last name</p>
+              </div>
 
-          <button type="submit" class="submit-btn">Create Account</button>
+              <div class="field">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder=" "
+                  required
+                />
 
-          <p class="login-hint">
-            Already have an account..? <a href="#">Log in</a>
+                <label for="email" class="signup-label">Email</label>
+
+                <p class="field__error">*Please provide a valid email</p>
+              </div>
+
+              <div class="field">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder=" "
+                  pattern="[0-9\s\+\-]{8,15}"
+                  required
+                />
+
+                <label for="phone" class="signup-label">Phone</label>
+
+                <p class="field__error">*Please enter a valid number</p>
+              </div>
+
+              <div class="field">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder=" "
+                  required
+                  minlength="8"
+                />
+
+                <label for="password" class="signup-label">Password</label>
+
+                <p class="field__error">
+                  *Password requires minimum 8 characters
+                </p>
+              </div>
+
+              <div class="field">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  placeholder=" "
+                  required
+                  minlength="8"
+                />
+
+                <label for="confirmPassword" class="signup-label"
+                  >Confirm Password</label
+                >
+
+                <p class="field__error" id="confirmError">
+                  *Password did not match
+                </p>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Create Account</button>
+
+            <p class="login-hint">
+              Already have an account..? <a href="#">Log in</a>
+            </p>
+          </form>
+
+          <p class="success-msg" id="successMsg" role="status">
+            🎉 Account created! Welcome to Basket.
           </p>
-        </form>
+        </div>
       </div>
     </main>
   </body>
