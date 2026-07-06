@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -290,7 +291,7 @@
         <div class="right-panel">
           <h1 class="heading">Get Started</h1>
 
-          <form id="signup-form">
+          <form id="signup-form" novalidate>
             <div class="form-grid">
               <div class="field">
                 <input
@@ -298,6 +299,7 @@
                   id="firstName"
                   name="firstName"
                   placeholder=" "
+                  pattern="[A-Za-z\s'-]{2,30}"
                   required
                 />
 
@@ -312,6 +314,7 @@
                   id="lastName"
                   name="lastName"
                   placeholder=" "
+                  pattern="[A-Za-z\s'-]{2,30}"
                   required
                 />
 
@@ -394,7 +397,7 @@
           </form>
 
           <p class="success-msg" id="successMsg" role="status">
-            🎉 Account created! Welcome to Basket.
+            🎉 Account created! Welcome to Tokofelix.
           </p>
         </div>
       </div>

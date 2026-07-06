@@ -240,6 +240,13 @@ main {
   transform: translateY(-28px);
 }
 
+.field input.js-mismatch {
+  border-color: var(--border-invalid);
+}
+.field input.js-mismatch ~ .field__error {
+  display: block;
+}
+
 .submit-btn{
   margin-top: 40px;
   font-family: var(--font-body);
